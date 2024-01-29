@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres
+    container_name: zimska
+    environment:
+      POSTGRES_DB: quarkusdb
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: 1234
+    ports:
+      - "5432:5432"
+    networks:
+      - quarkus_network
+
+networks:
+  quarkus_network:
+    driver: bridge
