@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:postgresql://localhost:5432/quarkusdb</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="gasilkodb@localhost" uuid="30ec0a16-5a20-4865-98b4-44b2f032ef26">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/gasilkodb</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

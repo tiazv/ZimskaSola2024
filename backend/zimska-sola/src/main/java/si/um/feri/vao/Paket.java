@@ -18,12 +18,14 @@ public class Paket {
     private Long id;
     private String naziv;
     private VrstaPaketa vrsta;
+    private String opis;
     private int cena;
     //private LocalDateTime sklenjen = LocalDateTime.now();
 
     public Paket(PaketDto dto) {
         this.naziv = dto.naziv();
         this.vrsta = dto.vrsta();
+        this.opis = dto.opis();
         this.cena = dto.cena();
         //this.sklenjen = dto.sklenjen();
     }
@@ -35,16 +37,16 @@ public class Paket {
         if (updatedPaket.vrsta != null) {
             this.vrsta = updatedPaket.vrsta;
         }
+        if (updatedPaket.opis != null) {
+            this.opis = updatedPaket.opis;
+        }
         if (updatedPaket.cena != 0) {
             this.cena = updatedPaket.cena;
         }
-        //if (updatedPaket.sklenjen != null) {
-        //    this.sklenjen = updatedPaket.sklenjen;
-        //}
     }
 
     public PaketDto toDto() {
-        return new PaketDto(id, naziv, vrsta, cena);
+        return new PaketDto(id, naziv, vrsta, opis, cena);
     }
 }
 

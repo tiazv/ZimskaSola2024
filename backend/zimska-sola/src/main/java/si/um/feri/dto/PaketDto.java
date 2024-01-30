@@ -8,6 +8,6 @@ public record PaketDto(
         Long id,
         String naziv,
         VrstaPaketa vrsta,
+        String opis,
         int cena
-        //java.time.LocalDateTime sklenjen
         ) { }
